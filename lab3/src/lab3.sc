@@ -44,4 +44,4 @@ joinLists(List(5,4,3,2), List(1,2,3,4,5,6))
 joinLists(List(), List())
 joinLists(List(1,2,3),List())
 
-//zlozonosc oblcizeniowa n
+//zlozonosc obliczeniowa n
