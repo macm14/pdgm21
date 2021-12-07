@@ -12,6 +12,8 @@ object lab5 {
         else if number == number % 16 then hexCalculatorHelper(0, (number % 16) :: result)
         else  hexCalculatorHelper(number/16, number%16 :: result)
       hexCalculatorHelper(number, List())
+//      if number < 0 then List(-1) ::: hexCalculatorHelper(-1 * number, List())
+//      else hexCalculatorHelper(number, List())
 
   def toAnyCalculator(number: Int, system_number: Int): List[Int] =
     if number<0 then Nil
@@ -23,6 +25,8 @@ object lab5 {
         else if number == number % system_number then toAnyCalculatorHelper(0, system_number, (number % system_number) :: result)
         else  toAnyCalculatorHelper(number/system_number, system_number, number%system_number :: result)
       toAnyCalculatorHelper(number, system_number, List())
+//      if number<0 then List(-1) ::: toAnyCalculatorHelper(-1 * number, system_number, List())
+//      else toAnyCalculatorHelper(number, system_number, List())
 
   sealed trait BT[+A]
   case object Empty extends BT[Nothing]
@@ -60,7 +64,7 @@ object lab5 {
     println(toHexCalculator(0))
 
     println(toAnyCalculator(31, 2))
-    println(toAnyCalculator(31, 16))
+    println(toAnyCalculator(-31, 16))
     println(toAnyCalculator(32, 8))
 
   }
